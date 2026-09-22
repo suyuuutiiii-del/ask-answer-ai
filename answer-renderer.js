@@ -1,0 +1,1 @@
+window.AGAAnswerRenderer={render(text,target){if(!target)return;target.textContent=String(text||"");target.dir=/[\u0600-\u06ff]/.test(text||"")?"auto":"ltr";},escape(text){return String(text||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}};
