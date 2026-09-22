@@ -1,0 +1,1 @@
+window.AGAEditor={enabled:false,toggle(){this.enabled=!this.enabled;document.documentElement.dataset.editor=this.enabled?"on":"off";return this.enabled;},save(key,value){localStorage.setItem("aga-r6-editor-"+key,JSON.stringify(value));},load(key,fallback=null){try{const v=localStorage.getItem("aga-r6-editor-"+key);return v?JSON.parse(v):fallback}catch{return fallback}}};
