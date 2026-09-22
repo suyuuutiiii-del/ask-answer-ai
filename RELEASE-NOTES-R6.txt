@@ -1,0 +1,19 @@
+ASK & GET ANSWER — R6
+
+R6 changes
+- Free allowance reduced to 5 questions per day.
+- Premium Teacher Plan: ₦1,500 for 30 days, up to 30 questions per day.
+- Premium remains a one-time 30-day payment; no automatic renewal is introduced.
+- Paystack verification now requires the exact configured product amount (default ₦1,500 / 150000 kobo).
+- PREMIUM_PRICE_KOBO can be configured server-side in Cloudflare; private keys remain server-side.
+- AI output ceilings reduced to help control API cost.
+- Stronger visible verification warnings for Qur’anic/Arabic text, calculations and examination content.
+- Service-worker cache advanced to R6 so updated assets replace R5 cache.
+- Existing R5 capabilities retained: speech input, read-aloud, Teacher Studio, lesson plans, class notes, worksheets, examinations, marking, editing, saved work, printing, sharing, reporting, installation, Arabic/Islamic Studies, Premium restoration and Editor Mode.
+
+Deployment safety
+- Test R6 before replacing production where possible.
+- PAYSTACK_SECRET_KEY, GEMINI_API_KEY, PREMIUM_TOKEN_SECRET and EDITOR_ACCESS_CODE belong in Cloudflare secrets/variables, never browser files.
+- Set PREMIUM_PRICE_KOBO=150000 if you want the amount explicit; otherwise R6 defaults to 150000.
+- Daily limits in R6 are device-side. A future server-side account/usage system is required for strong cross-device enforcement.
+- Use provider billing/budget controls for monthly API cost protection; this static package cannot enforce an account-wide monthly spend cap by itself.
