@@ -1,0 +1,1 @@
+window.AGAIllustrations={safePrompt(subject){return "Create a simple educational illustration using objects, symbols, landscapes, buildings, plants, books and geometric forms only. Do not depict humans, animals, prophets, angels or Allah. Topic: "+String(subject||"learning");}};
